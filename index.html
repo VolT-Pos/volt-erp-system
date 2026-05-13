@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volt ERP System Architecture</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+            margin: 0;
+        }
+
+        .architecture-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            width: 100%;
+        }
+
+        /* Base Block Style */
+        .block {
+            border-radius: 12px;
+            min-height: 50px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .block:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        /* Colors */
+        .bg-blue { background-color: #12457b; }
+        .bg-grey { background-color: #4a4a4a; }
+        .bg-teal { background-color: #145942; }
+        .bg-purple { background-color: #443c8a; }
+        .bg-red { background-color: #722f18; }
+        .bg-brown { background-color: #6a3e0f; }
+        .bg-olive { background-color: #2b4e10; }
+
+        /* Specific Widths */
+        .w-full { width: 100%; }
+        .w-3 { width: 33.33%; }
+        .w-2 { width: 50%; }
+        .w-4 { width: 25%; }
+
+        /* Arrows */
+        .arrow-vertical {
+            color: #999;
+            font-size: 24px;
+            line-height: 1;
+            margin: -10px 0;
+        }
+        .arrow-horizontal {
+            color: #999;
+            font-size: 24px;
+            padding: 0 10px;
+        }
+
+        /* Container for Row 2 to handle the horizontal arrow */
+        .row-with-arrow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="architecture-container">
+        <!-- Top Layer -->
+        <div class="row">
+            <div class="block bg-blue w-full"></div>
+        </div>
+        <div class="row">
+            <div class="block bg-grey w-3"></div>
+            <div class="block bg-grey w-3"></div>
+            <div class="block bg-grey w-3"></div>
+        </div>
+
+        <div class="arrow-vertical">&darr;</div>
+
+        <!-- Second Layer -->
+        <div class="row-with-arrow">
+            <div class="block bg-teal w-2"></div>
+            <div class="arrow-horizontal">&rarr;</div>
+            <div class="block bg-teal w-2"></div>
+        </div>
+
+        <div class="arrow-vertical">&darr;</div>
+
+        <!-- Middle Layers -->
+        <div class="row">
+            <div class="block bg-purple w-4"></div>
+            <div class="block bg-purple w-4"></div>
+            <div class="block bg-purple w-4"></div>
+            <div class="block bg-purple w-4"></div>
+        </div>
+        <div class="row">
+            <div class="block bg-red w-4"></div>
+            <div class="block bg-red w-4"></div>
+            <div class="block bg-red w-4"></div>
+            <div class="block bg-red w-4"></div>
+        </div>
+        <div class="row" style="width: 80%;">
+            <div class="block bg-brown w-3"></div>
+            <div class="block bg-brown w-3"></div>
+            <div class="block bg-brown w-3"></div>
+        </div>
+
+        <div class="arrow-vertical">&darr;</div>
+
+        <!-- Bottom Layers -->
+        <div class="row">
+            <div class="block bg-olive w-4"></div>
+            <div class="block bg-olive w-4"></div>
+            <div class="block bg-olive w-4"></div>
+            <div class="block bg-olive w-4"></div>
+        </div>
+        <div class="row">
+            <div class="block bg-grey w-3"></div>
+            <div class="block bg-grey w-3"></div>
+            <div class="block bg-grey w-3"></div>
+        </div>
+        <div class="row">
+            <div class="block bg-blue w-full"></div>
+        </div>
+    </div>
+
+</body>
+</html>
